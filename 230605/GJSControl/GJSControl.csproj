@@ -1,0 +1,708 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{10914CC8-20CF-49C2-A75E-AF46E0B83724}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GJSControl</RootNamespace>
+    <AssemblyName>GJSControl</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Optimize>false</Optimize>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>false</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gao_jia_sheng_co_ltd__logo_jZy_icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>..\..\..\5700_211103\211103\GJSControl\bin\Debug\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\5700_211103\211103\GJSControl\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\5700_211103\211103\GJSControl\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="AlarmTextDisplay, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GJSDLL\AlarmTextDisplay.dll</HintPath>
+    </Reference>
+    <Reference Include="Align">
+      <HintPath>GJSDLL\Align.dll</HintPath>
+    </Reference>
+    <Reference Include="Axis">
+      <HintPath>GJSDLL\Axis.dll</HintPath>
+    </Reference>
+    <Reference Include="BaseSequence">
+      <HintPath>GJSDLL\BaseSequence.dll</HintPath>
+    </Reference>
+    <Reference Include="Basler.Pylon, Version=1.1.0.0, Culture=neutral, PublicKeyToken=e389355f398382ab, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Basler.Pylon.dll</HintPath>
+    </Reference>
+    <Reference Include="CycleTime">
+      <HintPath>GJSDLL\CycleTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Detect">
+      <HintPath>GJSDLL\Detect.dll</HintPath>
+    </Reference>
+    <Reference Include="DIO">
+      <HintPath>GJSDLL\DIO.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShow, Version=1.11.7.7, Culture=neutral, PublicKeyToken=9f3f7731a2cb8d51, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebCam.1.11.7.7\lib\net40\DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectShowLib-2005, Version=2.1.0.0, Culture=neutral, PublicKeyToken=67e7b740cdfc2d3f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\DirectShowLib-2005.dll</HintPath>
+    </Reference>
+    <Reference Include="DirectX.Capture, Version=1.11.7.7, Culture=neutral, PublicKeyToken=8ce8db723478ce47, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebCam.1.11.7.7\lib\net40\DirectX.Capture.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Bitmap, Version=4.4.0.4099, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.Bitmap.4.4.0.4099\lib\netstandard2.0\Emgu.CV.Bitmap.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.Platform.NetStandard, Version=4.4.0.4099, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <HintPath>..\packages\Emgu.CV.4.4.0.4099\lib\netstandard2.0\Emgu.CV.Platform.NetStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="FileDelete">
+      <HintPath>GJSDLL\FileDelete.dll</HintPath>
+    </Reference>
+    <Reference Include="Flee, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Flee.2.0.0\lib\netstandard2.0\Flee.dll</HintPath>
+    </Reference>
+    <Reference Include="FmAsking">
+      <HintPath>GJSDLL\FmAsking.dll</HintPath>
+    </Reference>
+    <Reference Include="IniFile">
+      <HintPath>GJSDLL\IniFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.FRRJIf, Version=42.14.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Interop.FRRJIf.dll</HintPath>
+    </Reference>
+    <Reference Include="Keyboard, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GJSDLL\Keyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Language">
+      <HintPath>GJSDLL\Language.dll</HintPath>
+    </Reference>
+    <Reference Include="Log">
+      <HintPath>GJSDLL\Log.dll</HintPath>
+    </Reference>
+    <Reference Include="Login">
+      <HintPath>GJSDLL\Login.dll</HintPath>
+    </Reference>
+    <Reference Include="Maintain">
+      <HintPath>GJSDLL\Maintain.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MathNet.Numerics.5.0.0\lib\net48\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ML.OnnxRuntime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=f27f157f0a5b7bb6, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ML.OnnxRuntime.Managed.1.9.0\lib\netstandard2.0\Microsoft.ML.OnnxRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\Debug\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="ModbusRTU">
+      <HintPath>GJSDLL\ModbusRTU.dll</HintPath>
+    </Reference>
+    <Reference Include="Monitor, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>GJSDLL\Monitor.dll</HintPath>
+    </Reference>
+    <Reference Include="NumKeyboard">
+      <HintPath>GJSDLL\NumKeyboard.dll</HintPath>
+    </Reference>
+    <Reference Include="ProductionQuantity">
+      <HintPath>GJSDLL\ProductionQuantity.dll</HintPath>
+    </Reference>
+    <Reference Include="SimpleTCP, Version=1.0.24.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\SimpleTCP.1.0.24\lib\net45\SimpleTCP.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=6.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.6.0.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing.Primitives, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Primitives.4.3.0\lib\net45\System.Drawing.Primitives.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.3\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Reflection, Version=4.1.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Reflection.4.3.0\lib\net462\System.Reflection.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime, Version=4.1.1.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.4.3.1\lib\net462\System.Runtime.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.2\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Vision">
+      <HintPath>GJSDLL\Vision.dll</HintPath>
+    </Reference>
+    <Reference Include="Yolov5Net.Scorer, Version=1.0.9.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Yolov5Net.1.0.9\lib\netstandard2.0\Yolov5Net.Scorer.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Global.cs" />
+    <Compile Include="Objects\CommonLibrary\CommEnumDef.cs" />
+    <Compile Include="Objects\CommonLibrary\DataTransfer.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\Cylinder.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\Door.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\Lifts.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\Trolley.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\VaccumSucker.cs" />
+    <Compile Include="Objects\CommonLibrary\Mod\VibrationBow.cs" />
+    <Compile Include="Objects\CommonLibrary\MonitorDef.cs" />
+    <Compile Include="Objects\CommonLibrary\Motion\IOCtrlDef.cs" />
+    <Compile Include="Objects\CommonLibrary\Motion\MtnCtrlDef.cs" />
+    <Compile Include="Objects\CommonLibrary\PanasonicA6Def.cs" />
+    <Compile Include="Objects\CommonLibrary\RobotPipeClientDef.cs" />
+    <Compile Include="Objects\CommonLibrary\MotorPosCollectionDef.cs" />
+    <Compile Include="Objects\CommonLibrary\DeltaVFD.cs" />
+    <Compile Include="Objects\CommonLibrary\SaveImageDef.cs" />
+    <Compile Include="Objects\CommonLibrary\ScaraGJSDef.cs" />
+    <Compile Include="Objects\CommonLibrary\ShinLinSE3.cs" />
+    <Compile Include="Objects\CommonLibrary\StationStatusDef.cs" />
+    <Compile Include="Objects\CommonLibrary\TBotGJSDef .cs" />
+    <Compile Include="Objects\CommonLibrary\TCPIPClientDef.cs" />
+    <Compile Include="Objects\FileStreamLibrary\FileManagerDef.cs" />
+    <Compile Include="Objects\CommonLibrary\Motion\MotorPosDef.cs" />
+    <Compile Include="Objects\FileStreamLibrary\MachineDataDef.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sequence\ShortSeqence\SampleDef.cs" />
+    <Compile Include="Sequence\ShortSeqence\ShortSeqenceDef.cs" />
+    <Compile Include="Sequence\SequenceManagerDef.cs" />
+    <Compile Include="Sequence\StackLightDef.cs" />
+    <Compile Include="Sequence\SubSequence\OutputCVDef.cs" />
+    <Compile Include="Sequence\SubSequence\RobotDef.cs" />
+    <Compile Include="Sequence\SubSequence\LiftDef.cs" />
+    <Compile Include="Sequence\SubSequence\TakeCylinderDef.cs" />
+    <Compile Include="Sequence\SubSequence\PutCylinderDef.cs" />
+    <Compile Include="Sequence\SubSequence\DrillsDef.cs" />
+    <Compile Include="Sequence\SubSequence\InputCVDef.cs" />
+    <Compile Include="Sequence\SubSequence\Teach\FmRobotTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sequence\SubSequence\Teach\FmRobotTeach.designer.cs">
+      <DependentUpon>FmRobotTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sequence\SubSequence\Teach\FormMotorTeach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sequence\SubSequence\Teach\FormMotorTeach.designer.cs">
+      <DependentUpon>FormMotorTeach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\VisionLibrary\VisionManagerDef.cs" />
+    <Compile Include="Objects\VisionLibrary\Camera\CameraBaseCollectionDef.cs" />
+    <Compile Include="Sequence\Timeout\TimeoutDef.cs" />
+    <Compile Include="Objects\CommonLibrary\CommonManagerDef.cs" />
+    <Compile Include="Objects\FileStreamLibrary\RecipeDef.cs" />
+    <Compile Include="Sequence\Timeout\FmTimeoutMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sequence\Timeout\FmTimeoutMsg.designer.cs">
+      <DependentUpon>FmTimeoutMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Objects\FileStreamLibrary\RecipeCollection.cs" />
+    <Compile Include="Sequence\MainSequenceDef.cs" />
+    <Compile Include="UI\FANUC Robot\FmRobot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FANUC Robot\FmRobot.designer.cs">
+      <DependentUpon>FmRobot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmAreaCCD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmAreaCCD.Designer.cs">
+      <DependentUpon>FmAreaCCD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmDataTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmDataTransfer.designer.cs">
+      <DependentUpon>FmDataTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmDetectSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmDetectSet.designer.cs">
+      <DependentUpon>FmDetectSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmFunctionPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmFunctionPage.Designer.cs">
+      <DependentUpon>FmFunctionPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmImageFormulaEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmImageFormulaEditor.Designer.cs">
+      <DependentUpon>FmImageFormulaEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmLogData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmLogData.Designer.cs">
+      <DependentUpon>FmLogData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmLogin.Designer.cs">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmMaintain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmMaintain.Designer.cs">
+      <DependentUpon>FmMaintain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmModSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmModSet.designer.cs">
+      <DependentUpon>FmModSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmMonitorSet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmMonitorSet.designer.cs">
+      <DependentUpon>FmMonitorSet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmPicDisplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmPicDisplay.Designer.cs">
+      <DependentUpon>FmPicDisplay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\FmWebCamMonikerString.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\FmWebCamMonikerString.Designer.cs">
+      <DependentUpon>FmWebCamMonikerString.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MachineData\FmMachineData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MachineData\FmMachineData.Designer.cs">
+      <DependentUpon>FmMachineData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Motion\cIOAnalysisDef.cs" />
+    <Compile Include="UI\Motion\FmIO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Motion\FmIO.designer.cs">
+      <DependentUpon>FmIO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Motion\FmMotion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Motion\FmMotion.designer.cs">
+      <DependentUpon>FmMotion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\cUIManagerDef.cs" />
+    <Compile Include="UI\Main\FmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main\FmMain.Designer.cs">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MotorPosData\FmMotorPosData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MotorPosData\FmMotorPosData.Designer.cs">
+      <DependentUpon>FmMotorPosData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Recipe\FmRecipe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Recipe\FmRecipe.Designer.cs">
+      <DependentUpon>FmRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SCARA\FmScaraMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SCARA\FmScaraMove.designer.cs">
+      <DependentUpon>FmScaraMove.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\SCARA\FmScaraPosData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\SCARA\FmScaraPosData.designer.cs">
+      <DependentUpon>FmScaraPosData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\TBot\FmTBotMotorPos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TBot\FmTBotMotorPos.designer.cs" />
+    <Compile Include="UI\TBot\FmTBotMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\TBot\FmTBotMove.designer.cs" />
+    <Compile Include="UI\WelocomWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\WelocomWindow.designer.cs">
+      <DependentUpon>WelocomWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ZoomWindow\MatchPosition.cs" />
+    <Compile Include="UI\ZoomWindow\ZoomAndPanWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\ZoomWindow\ZoomAndPanWindow.designer.cs">
+      <DependentUpon>ZoomAndPanWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ZoomWindow\ZoomAndPanWindowLearnPair.cs" />
+    <EmbeddedResource Include="Sequence\SubSequence\Teach\FmRobotTeach.resx">
+      <DependentUpon>FmRobotTeach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence\SubSequence\Teach\FormMotorTeach.resx">
+      <DependentUpon>FormMotorTeach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sequence\Timeout\FmTimeoutMsg.resx">
+      <DependentUpon>FmTimeoutMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FANUC Robot\FmRobot.resx">
+      <DependentUpon>FmRobot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmAreaCCD.resx">
+      <DependentUpon>FmAreaCCD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmDataTransfer.resx">
+      <DependentUpon>FmDataTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmDetectSet.resx">
+      <DependentUpon>FmDetectSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmFunctionPage.resx">
+      <DependentUpon>FmFunctionPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmImageFormulaEditor.resx">
+      <DependentUpon>FmImageFormulaEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmLogData.resx">
+      <DependentUpon>FmLogData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmLogin.resx">
+      <DependentUpon>FmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmMaintain.resx">
+      <DependentUpon>FmMaintain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmModSet.resx">
+      <DependentUpon>FmModSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmMonitorSet.resx">
+      <DependentUpon>FmMonitorSet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmPicDisplay.resx">
+      <DependentUpon>FmPicDisplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\FmWebCamMonikerString.resx">
+      <DependentUpon>FmWebCamMonikerString.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MachineData\FmMachineData.resx">
+      <DependentUpon>FmMachineData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main\FmMain.resx">
+      <DependentUpon>FmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Motion\FmIO.resx">
+      <DependentUpon>FmIO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Motion\FmMotion.resx">
+      <DependentUpon>FmMotion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MotorPosData\FmMotorPosData.resx">
+      <DependentUpon>FmMotorPosData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Recipe\FmRecipe.resx">
+      <DependentUpon>FmRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SCARA\FmScaraMove.resx">
+      <DependentUpon>FmScaraMove.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\SCARA\FmScaraPosData.resx">
+      <DependentUpon>FmScaraPosData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\TBot\FmTBotMotorPos.resx" />
+    <EmbeddedResource Include="UI\TBot\FmTBotMove.resx" />
+    <EmbeddedResource Include="UI\WelocomWindow.resx">
+      <DependentUpon>WelocomWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ZoomWindow\ZoomAndPanWindow.resx">
+      <DependentUpon>ZoomAndPanWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAO JIA-SHENG CO LTD  LOGO%28small%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GAO JIA-SHENG CO LTD  LOGO%28100X97%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gao_jia_sheng_co_ltd__logo_jZy_icon.ico" />
+    <None Include="Resources\BasicBoard.png" />
+    <None Include="Resources\Board_LodePin.png" />
+    <None Include="Resources\Board_UnLodePin.png" />
+    <Content Include="Resources\Coordinate_XBYR.png" />
+    <Content Include="Resources\Coordinate_XLYB.png" />
+    <Content Include="Resources\Coordinate_XRYT.png" />
+    <Content Include="Resources\Coordinate_XTYL.png" />
+    <None Include="Resources\DataTransfer.png" />
+    <Content Include="Resources\DownArrow.png" />
+    <Content Include="Resources\DownArrow_Mini.png" />
+    <Content Include="Resources\End.png" />
+    <Content Include="Resources\Exit.png" />
+    <Content Include="Resources\Folder.png" />
+    <Content Include="Resources\GJS_90x90.png" />
+    <Content Include="Resources\Hands.png" />
+    <Content Include="Resources\Home.png" />
+    <Content Include="Resources\Image.png" />
+    <Content Include="Resources\GJS_128x128.png" />
+    <Content Include="Resources\GJS_64x64.png" />
+    <Content Include="Resources\GJS.png" />
+    <Content Include="Resources\InOut.png" />
+    <Content Include="Resources\Keyboard.png" />
+    <Content Include="Resources\Language.png" />
+    <Content Include="Resources\LeftArrow.png" />
+    <Content Include="Resources\Link.png" />
+    <Content Include="Resources\LogFile.png" />
+    <Content Include="Resources\LogIn.png" />
+    <Content Include="Resources\Maintenance.png" />
+    <Content Include="Resources\MechanicalParameters.png" />
+    <Content Include="Resources\Minus.png" />
+    <Content Include="Resources\Monitor.png" />
+    <Content Include="Resources\Monitor_S.png" />
+    <Content Include="Resources\MotorMove.png" />
+    <Content Include="Resources\MotorPoint.png" />
+    <Content Include="Resources\Next.png" />
+    <Content Include="Resources\Pause.png" />
+    <Content Include="Resources\Plus.png" />
+    <Content Include="Resources\Recipe.png" />
+    <Content Include="Resources\Record.png" />
+    <Content Include="Resources\Remove.png" />
+    <Content Include="Resources\RightArrow.png" />
+    <Content Include="Resources\RightArrow_Mini.png" />
+    <Content Include="Resources\RobotMove.png" />
+    <Content Include="Resources\RobotPoint.png" />
+    <Content Include="Resources\Save.png" />
+    <Content Include="Resources\Sequence.png" />
+    <Content Include="Resources\Set.png" />
+    <Content Include="Resources\Standby.png" />
+    <Content Include="Resources\Stop.png" />
+    <Content Include="Resources\Sync.png" />
+    <Content Include="Resources\Sync_S.png" />
+    <Content Include="Resources\Teach.png" />
+    <Content Include="Resources\UpArrow.png" />
+    <Content Include="Resources\Vision.png" />
+    <Content Include="Resources\WebCamera.png" />
+    <Content Include="Resources\Welocom_GJS.PNG" />
+    <Content Include="Resources\World.png" />
+    <Content Include="Resources\ZoomIn.png" />
+    <Content Include="Resources\ZoomOut.png" />
+    <None Include="Resources\ModSet.png" />
+    <None Include="Resources\Manual.png" />
+    <None Include="Resources\DoorLock_2.jpg" />
+    <None Include="Resources\DoorLock_1.jpg" />
+    <None Include="Resources\Board_1.png" />
+    <None Include="Resources\Board_2.png" />
+    <None Include="Resources\Board_3.png" />
+    <None Include="Resources\Board_4.png" />
+    <None Include="Resources\Board_5.png" />
+    <None Include="Resources\Board_6.png" />
+    <None Include="Resources\Board_7.png" />
+    <None Include="Resources\Board_8.png" />
+    <None Include="Resources\Cylinder_1.png" />
+    <None Include="Resources\Cylinder_1e.png" />
+    <None Include="Resources\Cylinder_2.png" />
+    <None Include="Resources\Cylinder_2e.png" />
+    <None Include="Resources\Cylinder_3.png" />
+    <None Include="Resources\Cylinder_3e.png" />
+    <None Include="Resources\Cylinder_4.png" />
+    <None Include="Resources\Cylinder_4e.png" />
+    <None Include="Resources\Cylinder_5.png" />
+    <None Include="Resources\Cylinder_5e.png" />
+    <Content Include="Resources\Adjustment.png" />
+    <Content Include="Resources\AlarmReset.png" />
+    <Content Include="Resources\Align.png" />
+    <Content Include="Resources\Auto.png" />
+    <None Include="Resources\LeftArrow_Mini.png" />
+    <None Include="Resources\mute.png" />
+    <None Include="Resources\volume.png" />
+    <None Include="Resources\Home_mini.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets" Condition="Exists('..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>此專案參考這部電腦上所缺少的 NuGet 套件。請啟用 NuGet 套件還原，以下載該套件。如需詳細資訊，請參閱 http://go.microsoft.com/fwlink/?LinkID=322105。缺少的檔案是 {0}。</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Emgu.CV.runtime.windows.4.4.0.4099\build\Emgu.CV.runtime.windows.targets'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.9.0\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.ML.OnnxRuntime.Managed.1.9.0\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets'))" />
+  </Target>
+  <Import Project="..\packages\Microsoft.ML.OnnxRuntime.Managed.1.9.0\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets" Condition="Exists('..\packages\Microsoft.ML.OnnxRuntime.Managed.1.9.0\build\netstandard2.0\Microsoft.ML.OnnxRuntime.Managed.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
