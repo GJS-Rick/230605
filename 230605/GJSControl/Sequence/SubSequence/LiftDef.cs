@@ -132,6 +132,7 @@ namespace nsSequence
                     }
                     if (MoveDone())
                     {
+
                         _StandbyStep.SetStep(EStandby.Done);
                     }
                     break;
